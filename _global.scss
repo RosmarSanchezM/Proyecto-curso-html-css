@@ -1,0 +1,57 @@
+@use "components";
+@mixin section-display {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #fff;
+}
+
+.logo a img {
+    max-width: 7rem;
+}
+
+.sec-home {
+    display: flex;
+    align-items: center;
+    @include section-display();
+    .home-cta {
+        flex: 1;
+        .cta-text {
+            color: components.$color-main;
+        }
+        .home-title h2 {
+            width: 20rem;
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.15;
+        }
+    }
+}
+
+.sec-feature {
+    @include section-display();
+    .intro {
+        text-align: center;
+        h3 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: .9rem;
+            color: #888;
+        }
+    }
+}
